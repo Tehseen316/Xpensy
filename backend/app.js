@@ -6,16 +6,22 @@ const errorHandler = require("./middlewares/errorHandlerMiddleware");
 const categoryRouter = require("./routes/categoryRouter");
 const transactionRouter = require("./routes/transactionRouter");
 const app = express();
+const dotenv = require("dotenv");
+dotenv.config();
+
 
 //!Connect to mongodb
 mongoose
-  .connect("mongodb://localhost:27017/mern-expenses")
+  .connect(process.env.MONGO_URL,{
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then(() => console.log("DB Connected"))
   .catch((e) => console.log(e));
 
 //! Cors config
 const corsOptions = {
-  origin: ["http://localhost:5173"],
+  origin: ["*"],
 };
 app.use(cors(corsOptions));
 //!Middlewares
