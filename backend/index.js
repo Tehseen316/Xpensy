@@ -9,7 +9,6 @@ const app = express();
 const dotenv = require("dotenv");
 dotenv.config();
 
-
 //!Connect to mongodb
 mongoose
   .connect(process.env.MONGO_URL,{
@@ -20,10 +19,10 @@ mongoose
   .catch((e) => console.log(e));
 
 //! Cors config
-const corsOptions = {
-  origin: ["*"],
-};
-app.use(cors(corsOptions));
+// const corsOptions = {
+//   origin: ["http://localhost:5173"],
+// };
+app.use(cors());
 //!Middlewares
 app.use(express.json()); //?Pass incoming json data
 //!Routes
@@ -38,3 +37,8 @@ const PORT = process.env.PORT || 8000;
 app.listen(PORT, () =>
   console.log(`Server is running on this port... ${PORT} `)
 );
+
+
+app.get('/', (req, res) => {
+  res.send('Working ✅');
+});

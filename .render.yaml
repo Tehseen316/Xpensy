@@ -1,0 +1,6 @@
+services:
+  - type: static
+    name: frontend
+    rootDir: Web frontend
+    buildCommand: npm run build
+    staticPublishPath: dist
