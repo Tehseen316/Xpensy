@@ -1,4 +1,26 @@
-# Xpensy (React + Node.js + Express + MongoDB)
+Xpensy Expense Tracker (React + Node.js + Express + MongoDB)
+
+Project Objectives
+
+To solve the problem of ineffective personal finance management by building a secure, scalable, and responsive expense tracking system with CRUD functionality, category-based filtering, visual analytics, and transaction history
+
+Tech Stack
+
+- Frontend: React (Vite) + Tailwind CSS  + React Router
+- Backend: Node.js + Express + Mongoose
+- Database: MongoDB (Cloud - MongoDB Atlas)
+- Deployment: Render (Frontend & Backend), MongoDB Atlas (Database)
+- Security: JWT, HttpOnly Cookies
+
+Key Features
+
+- User Authentication: JWT, bcrypt, HttpOnly secure cookies
+- Dashboard Analytics: Income vs. Expense visualization
+- Transaction Management: Add, edit, delete, filter by date/type/category
+- Custom Categories: User-defined categories for personalization
+
+
+
 
 This repository contains a full-stack web application with the following structure:
 
